@@ -22,14 +22,16 @@ def get_stock_enrichment(symbol: str):
             limit=31  # 30 days of data
         )
 
+        stock_info = client.get_ticker_details(symbol)
+
         if not bars:
             return {"error": "No market data returned."}
 
-        closes = [b.c for b in bars]
-        volumes = [b.v for b in bars]
-        highs = [b.h for b in bars]
-        lows = [b.l for b in bars]
-        dates = [b.t for b in bars]
+        closes = [b.close for b in bars]
+        volumes = [b.volume for b in bars]
+        highs = [b.high for b in bars]
+        lows = [b.low for b in bars]
+        dates = [b.timestamp for b in bars]
 
         current_price = closes[-1]
         start_price = closes[0]
@@ -43,6 +45,8 @@ def get_stock_enrichment(symbol: str):
         volatility = round(max_high - min_low, 2)
 
         return {
+            "name": stock_info.name,
+            "description": stock_info.description,
             "trend": trend,
             "price_change_pct": price_change_pct,
             "price_change_abs": price_change,
@@ -57,3 +61,5 @@ def get_stock_enrichment(symbol: str):
 
     except Exception as e:
         return {"error": str(e)}
+    
+# get_stock_enrichment("AAPL")
