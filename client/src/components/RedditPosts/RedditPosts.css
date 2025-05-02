@@ -1,0 +1,9 @@
+.reddit-posts{
+    padding-top: 20px;
+}
+
+.reddit-link-icon {
+    margin-left: 8px; /* Separación horizontal */
+    display: inline-flex;
+    vertical-align: middle; /* Alineación vertical precisa */
+}
