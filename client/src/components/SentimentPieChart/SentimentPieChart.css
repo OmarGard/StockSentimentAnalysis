@@ -1,0 +1,9 @@
+.pie-section{
+    width: 100%;
+    margin: 20px auto;
+}
+.pie-chart-container{
+    display: block;
+    margin: 20px auto;
+    width: 50%;
+}

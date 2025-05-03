@@ -28,7 +28,12 @@ function SearchBar() {
         placeholder="Enter stock symbol (e.g. AAPL)"
         fullWidth
       />
-      <Button variant="contained" color="primary" onClick={handleSearch} disabled={loading}>
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={handleSearch}
+        disabled={loading || !symbol.trim()}
+      >
         {loading ? "Loading..." : "Analyze"}
       </Button>
     </Box>

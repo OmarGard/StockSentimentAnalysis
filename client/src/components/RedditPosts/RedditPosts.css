@@ -1,9 +1,18 @@
 .reddit-posts{
     padding-top: 20px;
+    height: 100%;
 }
 
 .reddit-link-icon {
     margin-left: 8px; /* Separación horizontal */
     display: inline-flex;
     vertical-align: middle; /* Alineación vertical precisa */
+}
+
+/* Estilo para el rectángulo de sentimiento */
+.sentiment-rect {
+    min-height: 50px;
+    width: 10px;
+    margin-right: 15px;
+    border-radius: 5px;
 }

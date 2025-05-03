@@ -1,0 +1,9 @@
+.price-trend-chart {
+    width: 100%; /* Cambiado a 100% del ancho de la pantalla */
+    margin: 20px auto;
+}
+
+.chart-container {
+    display: block;
+    margin: 0 auto;
+}
