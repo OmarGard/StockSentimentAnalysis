@@ -1,4 +1,4 @@
-# StockSemtimentAnalysis
+# StockSentimentAnalysis
  This is a stock sentiment analysis app that gatheres Reddit threads and PolygonIO Financial data to perform sentiment analysis on stock market.
 
 ## Server
